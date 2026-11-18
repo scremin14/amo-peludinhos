@@ -1,0 +1,1661 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amo Peludinhos Itajaí</title>
+  <meta name="description" content="Amo Peludinhos Itajaí — protetora independente de cães e gatos. Conheça os animais disponíveis para adoção responsável.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+/* =========================================================
+   Amo Peludinhos Itajaí — estilos
+   Paleta tirada do perfil do Instagram: rosa do logo, azul
+   (🩷💙 da bio), silhueta preta sobre fundo claro.
+   ========================================================= */
+:root {
+  --rosa: #c9518a;
+  --rosa-escuro: #a83c70;
+  --rosa-medio: #e48bb4;
+  --rosa-suave: #fbe9f2;
+  --azul: #3e6db5;
+  --azul-suave: #e8eff9;
+  --tinta: #1f1a1d;
+  --texto: #3a3236;
+  --sutil: #7a6d74;
+  --borda: #efe3e9;
+  --fundo: #fffbfc;
+  --cartao: #ffffff;
+  --verde: #2f8a5b;
+  --verde-suave: #e3f4ea;
+  --amarelo: #a86b00;
+  --amarelo-suave: #fdf1d8;
+  --erro: #c0392b;
+  --raio: 16px;
+  --raio-sm: 10px;
+  --sombra: 0 1px 2px rgba(31, 26, 29, .04), 0 8px 24px rgba(201, 81, 138, .08);
+  --fonte: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  color: var(--texto);
+  background: var(--fundo);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+h1, h2, h3 { color: var(--tinta); line-height: 1.2; margin: 0 0 .5rem; }
+h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800; letter-spacing: -.02em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.01em; }
+h3 { font-size: 1.1rem; font-weight: 700; }
+a { color: var(--rosa); }
+p { margin: 0 0 1rem; }
+[hidden] { display: none !important; }
+
+.container { width: min(1120px, 100% - 32px); margin-inline: auto; }
+.container--estreito { width: min(720px, 100% - 32px); }
+.sutil { color: var(--sutil); }
+.obrig { color: var(--rosa); font-weight: 800; }
+.opcional { color: var(--sutil); font-weight: 400; font-size: .9em; }
+
+/* ---------- Topo ---------- */
+.topo {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(255, 251, 252, .9);
+  backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--borda);
+}
+.topo__inner {
+  width: min(1120px, 100% - 32px); margin-inline: auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  min-height: 68px;
+}
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--tinta); }
+.marca__logo { width: 44px; height: 44px; flex: none; }
+.marca__logo svg { width: 100%; height: 100%; }
+.marca__nome { font-weight: 800; font-size: 1.05rem; line-height: 1.1; }
+.marca__nome small { display: block; font-weight: 600; font-size: .78rem; color: var(--rosa); letter-spacing: .08em; text-transform: uppercase; }
+.nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+.nav a {
+  text-decoration: none; color: var(--texto); font-weight: 600; font-size: .95rem;
+  padding: 8px 12px; border-radius: 999px;
+}
+.nav a:hover { background: var(--rosa-suave); color: var(--rosa-escuro); }
+.nav .nav__equipe { border: 1px solid var(--borda); }
+@media (max-width: 720px) {
+  .nav a:not(.nav__equipe) { display: none; }
+  .marca__nome { font-size: .95rem; }
+}
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font: inherit; font-weight: 700; font-size: .98rem;
+  padding: 12px 22px; border-radius: 999px; border: 1.5px solid transparent;
+  cursor: pointer; text-decoration: none; transition: background .15s, transform .1s, border-color .15s;
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px); }
+.btn--primario { background: var(--rosa); color: #fff; }
+.btn--primario:hover { background: var(--rosa-escuro); }
+.btn--fantasma { background: transparent; color: var(--rosa-escuro); border-color: var(--rosa-medio); }
+.btn--fantasma:hover { background: var(--rosa-suave); }
+.btn--azul { background: var(--azul); color: #fff; }
+.btn--azul:hover { background: #2f5899; }
+.btn--whats { background: #1f8f4e; color: #fff; }
+.btn--whats:hover { background: #18733f; }
+.btn--perigo { background: #fff; color: var(--erro); border-color: #f0c4be; }
+.btn--perigo:hover { background: #fdf0ee; }
+.btn--neutro { background: #fff; color: var(--texto); border-color: var(--borda); }
+.btn--neutro:hover { background: #faf5f7; }
+.btn--pequeno { padding: 7px 14px; font-size: .88rem; }
+.btn:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+  outline: 3px solid var(--azul); outline-offset: 2px;
+}
+
+/* ---------- Hero ---------- */
+.hero { padding: 56px 0 40px; }
+.hero__inner { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; }
+.etiqueta {
+  display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--azul); background: var(--azul-suave); padding: 6px 12px; border-radius: 999px; margin-bottom: 18px;
+}
+.destaque { color: var(--rosa); }
+.hero__texto { font-size: 1.12rem; color: var(--sutil); max-width: 34em; }
+.hero__acoes { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+.hero__arte { display: flex; justify-content: center; }
+.hero__circulo { width: min(340px, 80vw); aspect-ratio: 1; }
+.hero__circulo svg { width: 100%; height: 100%; }
+@media (max-width: 820px) {
+  .hero { padding-top: 32px; }
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__arte { order: -1; }
+  .hero__circulo { width: 180px; }
+}
+
+/* ---------- Seções ---------- */
+.secao { padding: 56px 0; }
+.secao--suave { background: var(--rosa-suave); }
+.secao__cabeca { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+.secao__cabeca p { margin: 0; }
+
+.filtros { display: flex; gap: 12px; flex-wrap: wrap; }
+.campo-mini { display: flex; flex-direction: column; gap: 4px; font-size: .82rem; font-weight: 700; color: var(--sutil); }
+.campo-mini select, .campo-mini input {
+  font: inherit; font-size: .95rem; color: var(--texto);
+  padding: 9px 36px 9px 14px; border: 1.5px solid var(--borda); border-radius: 999px; background: #fff;
+  min-width: 140px;
+}
+
+/* ---------- Grade de animais ---------- */
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
+.cartao {
+  background: var(--cartao); border: 1px solid var(--borda); border-radius: var(--raio);
+  overflow: hidden; box-shadow: var(--sombra); display: flex; flex-direction: column;
+  cursor: pointer; transition: transform .15s, box-shadow .15s; text-align: left; padding: 0; font: inherit; color: inherit;
+}
+.cartao:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(201, 81, 138, .16); }
+.cartao__foto { aspect-ratio: 4 / 3; background: var(--rosa-suave); position: relative; overflow: hidden; }
+.cartao__foto img, .cartao__foto svg { width: 100%; height: 100%; object-fit: cover; }
+.cartao__codigo {
+  position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,.92); color: var(--tinta);
+  font-size: .75rem; font-weight: 800; padding: 3px 9px; border-radius: 999px; letter-spacing: .03em;
+}
+.cartao__corpo { padding: 14px 16px 18px; }
+.cartao__nome { font-size: 1.2rem; font-weight: 800; color: var(--tinta); margin: 0 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--azul-suave); color: var(--azul); }
+.chip--rosa { background: var(--rosa-suave); color: var(--rosa-escuro); }
+
+.vazio {
+  grid-column: 1 / -1; text-align: center; padding: 48px 16px; border: 1.5px dashed var(--borda);
+  border-radius: var(--raio); color: var(--sutil); background: #fff;
+}
+.vazio strong { display: block; color: var(--tinta); font-size: 1.1rem; margin-bottom: 4px; }
+
+/* ---------- Passos ---------- */
+.passos { list-style: none; padding: 0; margin: 24px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.passos li { background: #fff; border-radius: var(--raio); padding: 24px; border: 1px solid var(--borda); }
+.passos p { margin: 0; color: var(--sutil); }
+.passos__n {
+  display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+  background: var(--rosa); color: #fff; font-weight: 800; margin-bottom: 12px;
+}
+@media (max-width: 720px) { .passos { grid-template-columns: 1fr; } }
+
+/* ---------- Formulários ---------- */
+.form { margin-top: 20px; display: grid; gap: 4px; }
+.form__linha { display: grid; gap: 16px; }
+.form__linha--2 { grid-template-columns: 1fr 1fr; }
+@media (max-width: 600px) { .form__linha--2 { grid-template-columns: 1fr; } }
+.campo { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
+.campo label { font-weight: 700; font-size: .92rem; color: var(--tinta); }
+.campo input, .campo select, .campo textarea {
+  font: inherit; color: var(--texto); background: #fff;
+  border: 1.5px solid var(--borda); border-radius: var(--raio-sm); padding: 11px 14px; width: 100%;
+}
+.campo textarea { min-height: 90px; resize: vertical; }
+.campo input:focus, .campo select:focus, .campo textarea:focus { border-color: var(--rosa-medio); outline: none; box-shadow: 0 0 0 3px var(--rosa-suave); }
+.campo.invalido input, .campo.invalido select, .campo.invalido textarea { border-color: var(--erro); }
+.erro { color: var(--erro); font-size: .85rem; font-weight: 600; margin: 0; min-height: 1.2em; }
+.aviso-lgpd { font-size: .85rem; color: var(--sutil); background: var(--azul-suave); padding: 10px 14px; border-radius: var(--raio-sm); margin: 8px 0 12px; }
+.form__acoes { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ---------- Rodapé ---------- */
+.rodape { border-top: 1px solid var(--borda); padding: 28px 0; background: #fff; }
+.rodape__inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+.rodape p { margin: 0; color: var(--sutil); font-size: .9rem; }
+.rodape__links { display: flex; gap: 16px; }
+.rodape__links a { font-weight: 700; text-decoration: none; }
+
+/* ---------- Modal ---------- */
+.modal {
+  border: none; border-radius: 20px; padding: 0; width: min(760px, 100% - 24px); max-height: calc(100vh - 32px);
+  box-shadow: 0 24px 64px rgba(31, 26, 29, .25); color: var(--texto); background: #fff;
+}
+.modal::backdrop { background: rgba(31, 26, 29, .45); backdrop-filter: blur(2px); }
+.modal--estreito { width: min(460px, 100% - 24px); }
+.modal__fechar {
+  position: absolute; top: 12px; right: 12px; z-index: 2; width: 38px; height: 38px; border-radius: 50%;
+  border: none; background: rgba(255,255,255,.95); font-size: 1.4rem; cursor: pointer; line-height: 1; color: var(--tinta);
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.modal__corpo { padding: 24px; }
+.modal__acoes { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; padding: 0 24px 24px; }
+
+.ficha { display: grid; grid-template-columns: 1fr 1fr; }
+.ficha__galeria { background: var(--rosa-suave); }
+.ficha__principal { aspect-ratio: 1; overflow: hidden; }
+.ficha__principal img, .ficha__principal svg { width: 100%; height: 100%; object-fit: cover; }
+.ficha__miniaturas { display: flex; gap: 6px; padding: 8px; overflow-x: auto; }
+.ficha__miniaturas button { border: 2px solid transparent; padding: 0; border-radius: 8px; overflow: hidden; width: 56px; height: 56px; flex: none; cursor: pointer; background: none; }
+.ficha__miniaturas button[aria-current="true"] { border-color: var(--rosa); }
+.ficha__miniaturas img { width: 100%; height: 100%; object-fit: cover; }
+.ficha__info { padding: 28px 24px 24px; display: flex; flex-direction: column; gap: 12px; }
+.ficha__codigo { font-size: .8rem; font-weight: 800; color: var(--rosa); letter-spacing: .06em; }
+.dados { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 0; font-size: .95rem; }
+.dados dt { color: var(--sutil); font-weight: 600; }
+.dados dd { margin: 0; font-weight: 700; color: var(--tinta); }
+.ficha__acoes { display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
+@media (max-width: 680px) {
+  .ficha { grid-template-columns: 1fr; }
+  .ficha__principal { aspect-ratio: 4 / 3; }
+}
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
+  background: var(--tinta); color: #fff; padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: .95rem;
+  transition: opacity .2s, transform .2s; z-index: 100; max-width: calc(100% - 32px); text-align: center;
+}
+.toast.visivel { opacity: 1; transform: translate(-50%, 0); }
+.toast.erro-toast { background: var(--erro); }
+
+/* =========================================================
+   ÁREA ADMINISTRATIVA
+   ========================================================= */
+.login { min-height: calc(100vh - 160px); display: grid; place-items: center; padding: 40px 16px; }
+.login__caixa { width: min(420px, 100%); background: #fff; border: 1px solid var(--borda); border-radius: 20px; padding: 32px; box-shadow: var(--sombra); }
+.login__caixa h1 { font-size: 1.6rem; }
+.login__caixa .btn { width: 100%; margin-top: 8px; }
+
+.admin { padding: 28px 0 56px; }
+.admin__topo { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.admin__topo h1 { font-size: 1.6rem; margin: 0; }
+.admin__usuario { display: flex; align-items: center; gap: 10px; font-size: .92rem; color: var(--sutil); }
+.abas { display: flex; gap: 4px; border-bottom: 1px solid var(--borda); margin-bottom: 24px; overflow-x: auto; }
+.abas button {
+  font: inherit; font-weight: 700; color: var(--sutil); background: none; border: none; cursor: pointer;
+  padding: 12px 16px; border-bottom: 3px solid transparent; margin-bottom: -1px; white-space: nowrap;
+}
+.abas button[aria-selected="true"] { color: var(--rosa-escuro); border-bottom-color: var(--rosa); }
+.abas .contador { background: var(--rosa); color: #fff; border-radius: 999px; font-size: .72rem; padding: 1px 7px; margin-left: 4px; }
+
+.resumo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+.resumo__item { background: #fff; border: 1px solid var(--borda); border-radius: var(--raio-sm); padding: 14px 16px; }
+.resumo__item span { display: block; color: var(--sutil); font-size: .82rem; font-weight: 700; }
+.resumo__item strong { font-size: 1.6rem; color: var(--tinta); }
+@media (max-width: 720px) { .resumo { grid-template-columns: repeat(2, 1fr); } }
+
+.barra { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.barra .filtros { align-items: flex-end; }
+
+.tabela-wrap { background: #fff; border: 1px solid var(--borda); border-radius: var(--raio); overflow-x: auto; }
+.tabela { width: 100%; border-collapse: collapse; font-size: .93rem; }
+.tabela th { text-align: left; font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--sutil); padding: 12px 14px; border-bottom: 1px solid var(--borda); background: #fdf8fa; white-space: nowrap; }
+.tabela td { padding: 12px 14px; border-bottom: 1px solid var(--borda); vertical-align: middle; }
+.tabela tr:last-child td { border-bottom: none; }
+.tabela .acoes { display: flex; gap: 6px; justify-content: flex-end; flex-wrap: wrap; }
+.tabela .mini-foto { width: 44px; height: 44px; border-radius: 10px; overflow: hidden; background: var(--rosa-suave); flex: none; }
+.tabela .mini-foto img, .tabela .mini-foto svg { width: 100%; height: 100%; object-fit: cover; }
+.tabela .nome-cel { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--tinta); }
+.tabela .linha-vazia td { text-align: center; color: var(--sutil); padding: 32px; }
+
+.status { display: inline-block; font-size: .78rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.status--disponivel { background: var(--verde-suave); color: var(--verde); }
+.status--processo { background: var(--amarelo-suave); color: var(--amarelo); }
+.status--adotado { background: var(--azul-suave); color: var(--azul); }
+.status--pendente { background: var(--amarelo-suave); color: var(--amarelo); }
+.status--concluido { background: var(--verde-suave); color: var(--verde); }
+
+.fotos-edicao { display: flex; flex-wrap: wrap; gap: 8px; }
+.fotos-edicao__item { position: relative; width: 84px; height: 84px; border-radius: 10px; overflow: hidden; background: var(--rosa-suave); }
+.fotos-edicao__item img { width: 100%; height: 100%; object-fit: cover; }
+.fotos-edicao__item button {
+  position: absolute; top: 4px; right: 4px; width: 24px; height: 24px; border-radius: 50%; border: none;
+  background: rgba(31,26,29,.75); color: #fff; cursor: pointer; font-size: .9rem; line-height: 1;
+}
+.fotos-edicao__add {
+  width: 84px; height: 84px; border-radius: 10px; border: 1.5px dashed var(--rosa-medio); color: var(--rosa);
+  display: grid; place-items: center; cursor: pointer; font-weight: 800; font-size: .8rem; text-align: center; background: #fff;
+}
+.fotos-edicao__add input { display: none; }
+
+.nota { font-size: .85rem; color: var(--sutil); background: #faf5f7; border-radius: var(--raio-sm); padding: 10px 14px; margin: 0 0 16px; }
+.cartao-config { background: #fff; border: 1px solid var(--borda); border-radius: var(--raio); padding: 24px; max-width: 560px; }
+
+</style>
+</head>
+<body>
+  <header class="topo">
+    <div class="topo__inner">
+      <a href="#/" class="marca" aria-label="Amo Peludinhos Itajaí — início">
+        <span class="marca__logo" aria-hidden="true"></span>
+        <span class="marca__nome">Amo Peludinhos <small>Itajaí</small></span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#/" data-scroll="adotar">Adotar</a>
+        <a href="#/" data-scroll="como">Como funciona</a>
+        <a href="#/" data-scroll="interesse">Quero adotar</a>
+        <a href="#/admin" class="nav__equipe">Área da equipe</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ÁREA PÚBLICA -->
+  <main id="view-publico">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <p class="etiqueta">Protetora independente · sem abrigo</p>
+          <h1>Um peludinho está esperando <span class="destaque">por você</span>.</h1>
+          <p class="hero__texto">Resgatamos, cuidamos e encaminhamos cães e gatos para adoção responsável em Itajaí – SC. Conheça quem está pronto para um novo lar.</p>
+          <div class="hero__acoes">
+            <a href="#/" data-scroll="adotar" class="btn btn--primario">Ver animais disponíveis</a>
+            <a href="#/" data-scroll="interesse" class="btn btn--fantasma">Manifestar interesse</a>
+          </div>
+        </div>
+        <div class="hero__arte" aria-hidden="true">
+          <div class="hero__circulo"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="adotar" class="secao">
+      <div class="container">
+        <div class="secao__cabeca">
+          <div>
+            <h2>Disponíveis para adoção</h2>
+            <p class="sutil" id="contagem-publica"></p>
+          </div>
+          <form class="filtros" id="filtros" aria-label="Filtrar animais">
+            <label class="campo-mini">
+              <span>Espécie</span>
+              <select name="especie">
+                <option value="">Todas</option>
+                <option>Cão</option>
+                <option>Gato</option>
+              </select>
+            </label>
+            <label class="campo-mini">
+              <span>Porte</span>
+              <select name="porte">
+                <option value="">Todos</option>
+                <option>Pequeno</option>
+                <option>Médio</option>
+                <option>Grande</option>
+              </select>
+            </label>
+          </form>
+        </div>
+        <div class="grade" id="grade-publica" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="como" class="secao secao--suave">
+      <div class="container">
+        <h2>Como funciona a adoção</h2>
+        <ol class="passos">
+          <li><span class="passos__n">1</span><h3>Conheça</h3><p>Veja os animais disponíveis, suas fotos, características e o código de cada um.</p></li>
+          <li><span class="passos__n">2</span><h3>Fale com a gente</h3><p>Preencha o formulário de interesse ou chame no WhatsApp para tirar dúvidas.</p></li>
+          <li><span class="passos__n">3</span><h3>Adoção responsável</h3><p>A protetora entra em contato, conversa com você e acompanha a ida para o novo lar.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="interesse" class="secao">
+      <div class="container container--estreito">
+        <h2>Quero adotar</h2>
+        <p class="sutil">Deixe seus dados e a protetora entrará em contato. Campos com <span class="obrig">*</span> são obrigatórios.</p>
+        <form id="form-interesse" class="form" novalidate>
+          <div class="form__linha">
+            <div class="campo">
+              <label for="fi-nome">Nome completo <span class="obrig">*</span></label>
+              <input id="fi-nome" name="nome" autocomplete="name" required>
+              <p class="erro" data-erro="nome"></p>
+            </div>
+          </div>
+          <div class="form__linha form__linha--2">
+            <div class="campo">
+              <label for="fi-telefone">Telefone / WhatsApp <span class="obrig">*</span></label>
+              <input id="fi-telefone" name="telefone" inputmode="tel" autocomplete="tel" placeholder="(47) 99999-9999" required>
+              <p class="erro" data-erro="telefone"></p>
+            </div>
+            <div class="campo">
+              <label for="fi-email">E-mail <span class="obrig">*</span></label>
+              <input id="fi-email" name="email" type="email" autocomplete="email" required>
+              <p class="erro" data-erro="email"></p>
+            </div>
+          </div>
+          <div class="form__linha form__linha--2">
+            <div class="campo">
+              <label for="fi-cidade">Cidade de residência <span class="obrig">*</span></label>
+              <input id="fi-cidade" name="cidade" autocomplete="address-level2" required>
+              <p class="erro" data-erro="cidade"></p>
+            </div>
+            <div class="campo">
+              <label for="fi-codigo">Código do animal <span class="opcional">(opcional)</span></label>
+              <input id="fi-codigo" name="codigo" placeholder="Ex.: AP-0001">
+              <p class="erro" data-erro="codigo"></p>
+            </div>
+          </div>
+          <p class="aviso-lgpd">Seus dados serão usados apenas pela equipe da Amo Peludinhos para acompanhar sua solicitação de adoção (LGPD).</p>
+          <div class="form__acoes">
+            <button type="submit" class="btn btn--primario">Enviar interesse</button>
+            <a class="btn btn--whats js-whats" target="_blank" rel="noopener">Prefiro o WhatsApp</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ÁREA ADMINISTRATIVA (renderizada por js/admin.js) -->
+  <main id="view-admin" hidden></main>
+
+  <footer class="rodape">
+    <div class="container rodape__inner">
+      <div>
+        <strong>Amo Peludinhos Itajaí</strong>
+        <p>Protetora independente de cães e gatos · Itajaí – SC</p>
+      </div>
+      <div class="rodape__links">
+        <a href="https://www.instagram.com/amopeludinhos_itajai/" target="_blank" rel="noopener">Instagram</a>
+        <a class="js-whats" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ficha pública do animal -->
+  <dialog id="modal-animal" class="modal" aria-labelledby="ma-titulo"></dialog>
+  <!-- Diálogos genéricos (confirmação / formulários admin) -->
+  <dialog id="modal-geral" class="modal"></dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+/* =========================================================
+   store.js — camada de dados (persistência)
+   Protótipo: os dados ficam no localStorage do navegador.
+   Em produção esta camada seria substituída pela API/banco
+   (Django + PostgreSQL, conforme a especificação).
+   Entidades: Animal, Fotografia (dentro do animal),
+   Solicitação de adoção, Adoção, Usuário autorizado.
+   ========================================================= */
+(function () {
+  const CHAVE = 'amopeludinhos_db_v1';
+
+  const SITUACOES_ANIMAL = ['Disponível para adoção', 'Em processo de adoção', 'Adotado'];
+  const SITUACOES_SOLICITACAO = ['Pendente', 'Concluído'];
+
+  function hoje(offsetDias = 0) {
+    const d = new Date();
+    d.setDate(d.getDate() + offsetDias);
+    return d.toISOString();
+  }
+
+  function uid() {
+    return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  }
+
+  // Dados de exemplo (nomes vistos nos destaques do Instagram; demais informações são fictícias)
+  function dadosIniciais() {
+    const animais = [
+      { nome: 'Max', especie: 'Cão', sexo: 'Macho', idade: '3 anos', porte: 'Médio', caracteristicas: 'Brincalhão, carinhoso e se dá bem com outros cães. Adora passear.', saude: 'Vacinado (V10 e antirrábica), vermifugado e castrado.', situacao: 'Disponível para adoção' },
+      { nome: 'Skaye', especie: 'Cão', sexo: 'Fêmea', idade: '1 ano', porte: 'Pequeno', caracteristicas: 'Doce e tranquila. Ideal para apartamento.', saude: 'Vacinada, vermifugada e castrada.', situacao: 'Disponível para adoção' },
+      { nome: 'Otto', especie: 'Gato', sexo: 'Macho', idade: '2 anos', porte: 'Pequeno', caracteristicas: 'Curioso, gosta de colo e convive bem com crianças.', saude: 'Vacinado (V4), castrado, FIV/FeLV negativo.', situacao: 'Disponível para adoção' },
+      { nome: 'Veludo', especie: 'Gato', sexo: 'Macho', idade: '8 meses', porte: 'Pequeno', caracteristicas: 'Pelagem preta e macia, muito brincalhão.', saude: 'Primeira dose da vacina aplicada. Castração agendada.', situacao: 'Disponível para adoção' },
+      { nome: 'Susy', especie: 'Cão', sexo: 'Fêmea', idade: '5 anos', porte: 'Grande', caracteristicas: 'Calma, companheira e muito obediente.', saude: 'Vacinada e castrada. Em tratamento leve de pele.', situacao: 'Disponível para adoção' },
+      { nome: 'Tigrado', especie: 'Gato', sexo: 'Macho', idade: '1 ano', porte: 'Médio', caracteristicas: 'Rajado, independente e carinhoso no seu tempo.', saude: 'Vacinado e castrado.', situacao: 'Em processo de adoção' },
+      { nome: 'Raul', especie: 'Cão', sexo: 'Macho', idade: '4 anos', porte: 'Médio', caracteristicas: 'Alegre e protetor.', saude: 'Vacinado e castrado.', situacao: 'Adotado' }
+    ].map((a, i) => ({ id: uid() + i, codigo: 'AP-' + String(i + 1).padStart(4, '0'), fotos: [], criadoEm: hoje(-30 + i), ...a }));
+
+    const raul = animais.find(a => a.nome === 'Raul');
+    const tigrado = animais.find(a => a.nome === 'Tigrado');
+
+    const solicitacoes = [
+      { id: uid() + 'a', data: hoje(-6), nome: 'Mariana Souza', telefone: '(47) 99811-2233', email: 'mariana.exemplo@email.com', cidade: 'Itajaí', codigoAnimal: tigrado.codigo, situacao: 'Pendente' },
+      { id: uid() + 'b', data: hoje(-2), nome: 'Carlos Pereira', telefone: '(47) 98877-6655', email: 'carlos.exemplo@email.com', cidade: 'Balneário Camboriú', codigoAnimal: '', situacao: 'Pendente' },
+      { id: uid() + 'c', data: hoje(-20), nome: 'Ana Lima', telefone: '(47) 99123-4567', email: 'ana.exemplo@email.com', cidade: 'Navegantes', codigoAnimal: raul.codigo, situacao: 'Concluído' }
+    ];
+
+    const adocoes = [
+      { id: uid() + 'd', animalId: raul.id, adotante: 'Ana Lima', solicitacaoId: solicitacoes[2].id, data: hoje(-15), observacoes: 'Adaptação ótima, tutora enviou fotos após uma semana.' }
+    ];
+
+    return {
+      versao: 1,
+      proximoCodigo: animais.length + 1,
+      animais,
+      solicitacoes,
+      adocoes,
+      usuarios: [],
+      config: { whatsapp: '', mensagemWhats: 'Olá! Vi o site da Amo Peludinhos e gostaria de saber mais sobre adoção.' }
+    };
+  }
+
+  let db = null;
+
+  function carregar() {
+    try {
+      const bruto = localStorage.getItem(CHAVE);
+      if (bruto) { db = JSON.parse(bruto); return; }
+    } catch (e) { /* armazenamento indisponível: segue em memória */ }
+    db = dadosIniciais();
+    salvar();
+  }
+
+  function salvar() {
+    try {
+      localStorage.setItem(CHAVE, JSON.stringify(db));
+      return true;
+    } catch (e) {
+      console.error('Falha ao salvar', e);
+      return false;
+    }
+  }
+
+  // Executa uma alteração e só confirma se a gravação funcionou (spec: não confirmar antes de gravar)
+  function transacao(fn) {
+    const copia = JSON.stringify(db);
+    const resultado = fn(db);
+    if (!salvar()) {
+      db = JSON.parse(copia);
+      throw new Error('Não foi possível salvar. Verifique o espaço disponível (fotos muito grandes?) e tente novamente.');
+    }
+    return resultado;
+  }
+
+  const Store = {
+    SITUACOES_ANIMAL,
+    SITUACOES_SOLICITACAO,
+    uid,
+
+    // ---------- Animais ----------
+    animais() { return db.animais.slice(); },
+    animal(id) { return db.animais.find(a => a.id === id); },
+    animalPorCodigo(codigo) {
+      const c = String(codigo || '').trim().toUpperCase();
+      return db.animais.find(a => a.codigo.toUpperCase() === c);
+    },
+    animaisDisponiveis() { return db.animais.filter(a => a.situacao === 'Disponível para adoção'); },
+
+    salvarAnimal(dados) {
+      return transacao(db => {
+        if (dados.id) {
+          const a = db.animais.find(x => x.id === dados.id);
+          Object.assign(a, dados, { atualizadoEm: hoje() });
+          return a;
+        }
+        // RF02 — código único gerado automaticamente
+        const novo = { ...dados, id: uid(), codigo: 'AP-' + String(db.proximoCodigo++).padStart(4, '0'), criadoEm: hoje() };
+        db.animais.push(novo);
+        return novo;
+      });
+    },
+
+    excluirAnimal(id) {
+      if (db.adocoes.some(ad => ad.animalId === id)) {
+        throw new Error('Este animal possui adoção registrada. O cadastro é mantido para preservar o histórico.');
+      }
+      return transacao(db => { db.animais = db.animais.filter(a => a.id !== id); });
+    },
+
+    // ---------- Solicitações ----------
+    solicitacoes() { return db.solicitacoes.slice().sort((a, b) => b.data.localeCompare(a.data)); },
+    solicitacao(id) { return db.solicitacoes.find(s => s.id === id); },
+    criarSolicitacao(dados) {
+      return transacao(db => {
+        const nova = { ...dados, id: uid(), data: hoje(), situacao: 'Pendente' };
+        db.solicitacoes.push(nova);
+        return nova;
+      });
+    },
+    salvarSolicitacao(dados) {
+      return transacao(db => {
+        const s = db.solicitacoes.find(x => x.id === dados.id);
+        Object.assign(s, dados);
+        return s;
+      });
+    },
+    excluirSolicitacao(id) {
+      return transacao(db => {
+        db.solicitacoes = db.solicitacoes.filter(s => s.id !== id);
+        db.adocoes.forEach(ad => { if (ad.solicitacaoId === id) ad.solicitacaoId = null; });
+      });
+    },
+
+    // ---------- Adoções ----------
+    adocoes() { return db.adocoes.slice().sort((a, b) => b.data.localeCompare(a.data)); },
+    registrarAdocao({ animalId, adotante, solicitacaoId, data, observacoes }) {
+      return transacao(db => {
+        const animal = db.animais.find(a => a.id === animalId);
+        if (!animal) throw new Error('Animal não encontrado.');
+        if (db.adocoes.some(ad => ad.animalId === animalId)) throw new Error('Este animal já possui adoção registrada.');
+        const ad = { id: uid(), animalId, adotante, solicitacaoId: solicitacaoId || null, data, observacoes };
+        db.adocoes.push(ad);
+        animal.situacao = 'Adotado'; // RN02
+        if (solicitacaoId) {
+          const s = db.solicitacoes.find(x => x.id === solicitacaoId);
+          if (s) s.situacao = 'Concluído';
+        }
+        return ad;
+      });
+    },
+
+    // ---------- Usuários ----------
+    usuarios() { return db.usuarios.slice(); },
+    usuario(id) { return db.usuarios.find(u => u.id === id); },
+    usuarioPorEmail(email) {
+      const e = String(email || '').trim().toLowerCase();
+      return db.usuarios.find(u => u.email === e);
+    },
+    criarUsuario(u) {
+      return transacao(db => {
+        const novo = { ...u, id: uid(), email: u.email.trim().toLowerCase(), criadoEm: hoje() };
+        db.usuarios.push(novo);
+        return novo;
+      });
+    },
+    excluirUsuario(id) { return transacao(db => { db.usuarios = db.usuarios.filter(u => u.id !== id); }); },
+
+    // ---------- Configurações ----------
+    config() { return { ...db.config }; },
+    salvarConfig(c) { return transacao(db => { db.config = { ...db.config, ...c }; }); },
+
+    // ---------- Cópia de segurança (RNF10) ----------
+    exportar() { return JSON.stringify(db, null, 2); },
+    importar(texto) {
+      const novo = JSON.parse(texto);
+      if (!novo || !Array.isArray(novo.animais) || !Array.isArray(novo.usuarios)) throw new Error('Arquivo de backup inválido.');
+      const antigo = db;
+      db = novo;
+      if (!salvar()) { db = antigo; throw new Error('Não foi possível restaurar o backup.'); }
+    }
+  };
+
+  carregar();
+  window.Store = Store;
+})();
+
+</script>
+  <script>
+/* =========================================================
+   auth.js — autenticação e acessos (RF19, RF20, RNF03, RNF09)
+   Senhas nunca são guardadas em texto puro: armazena-se
+   SHA-256(sal + senha). Em produção, usar o hasher do Django
+   (PBKDF2/Argon2) no servidor.
+   ========================================================= */
+(function () {
+  const CHAVE_SESSAO = 'amopeludinhos_sessao';
+
+  async function sha256(texto) {
+    if (window.crypto && crypto.subtle) {
+      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(texto));
+      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+    // Alternativa para contextos sem WebCrypto (não criptográfica; apenas para o protótipo)
+    let h1 = 0xdeadbeef, h2 = 0x41c6ce57;
+    for (let i = 0; i < texto.length; i++) {
+      const c = texto.charCodeAt(i);
+      h1 = Math.imul(h1 ^ c, 2654435761); h2 = Math.imul(h2 ^ c, 1597334677);
+    }
+    return 'fb' + (h1 >>> 0).toString(16) + (h2 >>> 0).toString(16);
+  }
+
+  function gerarSal() {
+    const a = new Uint8Array(16);
+    (window.crypto || {}).getRandomValues ? crypto.getRandomValues(a) : a.forEach((_, i) => (a[i] = Math.random() * 256));
+    return Array.from(a).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  function lerSessao() {
+    try { return JSON.parse(sessionStorage.getItem(CHAVE_SESSAO) || 'null'); } catch (e) { return null; }
+  }
+
+  const Auth = {
+    precisaConfigurar() { return Store.usuarios().length === 0; },
+
+    async criarAcesso({ nome, email, senha, perfil }) {
+      if (Store.usuarioPorEmail(email)) throw new Error('Já existe um usuário com este e-mail.');
+      const sal = gerarSal();
+      const hash = await sha256(sal + senha);
+      return Store.criarUsuario({ nome: nome.trim(), email, sal, hash, perfil });
+    },
+
+    async entrar(email, senha) {
+      const u = Store.usuarioPorEmail(email);
+      // mensagem única para não revelar se o e-mail existe
+      if (!u) throw new Error('E-mail ou senha inválidos.');
+      const hash = await sha256(u.sal + senha);
+      if (hash !== u.hash) throw new Error('E-mail ou senha inválidos.');
+      try { sessionStorage.setItem(CHAVE_SESSAO, JSON.stringify({ id: u.id })); } catch (e) { Auth._mem = u.id; }
+      return u;
+    },
+
+    sair() {
+      try { sessionStorage.removeItem(CHAVE_SESSAO); } catch (e) { /* ignora */ }
+      Auth._mem = null;
+    },
+
+    atual() {
+      const s = lerSessao();
+      const id = (s && s.id) || Auth._mem;
+      return id ? Store.usuario(id) || null : null;
+    },
+
+    ehResponsavel() {
+      const u = Auth.atual();
+      return !!u && u.perfil === 'responsavel';
+    }
+  };
+
+  window.Auth = Auth;
+})();
+
+</script>
+  <script>
+/* =========================================================
+   ui.js — utilidades de interface compartilhadas
+   (ilustrações, toast, diálogos, fotos, formatação)
+   ========================================================= */
+(function () {
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  // Silhuetas inspiradas no logo do perfil (cachorrinho preto em círculo rosa)
+  const DOG = `<g fill="#1f1a1d">
+      <path d="M19.5 34c-5-2.5-6.5-7.5-6-12 .2-1.6 2.2-1.8 2.6-.3 1 3.6 3 6.4 6.4 7.6z"/>
+      <rect x="17" y="29" width="30" height="14" rx="7"/>
+      <rect x="39" y="22" width="9" height="14" rx="4"/>
+      <circle cx="46" cy="22" r="8.5"/>
+      <rect x="47" y="22.5" width="11.5" height="7.5" rx="3.7"/>
+      <path d="M39.5 16.5c-4.5.8-6 5.5-5.2 10.8.3 2 2.6 2.4 3.6.7 1.6-2.9 2.6-6.6 2.8-10.3z"/>
+      <rect x="19" y="38" width="5.5" height="17" rx="2.7"/>
+      <rect x="26.5" y="38" width="5.5" height="16" rx="2.7"/>
+      <rect x="36" y="38" width="5.5" height="16" rx="2.7"/>
+      <rect x="42.5" y="38" width="5.5" height="17" rx="2.7"/>
+      <circle cx="49" cy="20" r="1.3" fill="#fff"/>
+    </g>`;
+  const CAT = `<g fill="#1f1a1d">
+      <path d="M45 53.5c9.5.2 12.8-8.2 9.6-15.6-.8-1.8-3.2-1.2-3 .7.6 5.8-2.2 10-7.8 10.6z"/>
+      <ellipse cx="34" cy="44.5" rx="13" ry="12.5"/>
+      <circle cx="34" cy="25" r="10"/>
+      <path d="M25.2 21.5l.4-12.2c.1-1 1.2-1.4 1.9-.7l6.2 7.8z"/>
+      <path d="M42.8 21.5l-.4-12.2c-.1-1-1.2-1.4-1.9-.7l-6.2 7.8z"/>
+      <circle cx="30.5" cy="24.5" r="1.3" fill="#fff"/><circle cx="37.5" cy="24.5" r="1.3" fill="#fff"/>
+    </g>`;
+
+  function arte(especie, { anel = true, fundo = '#fbe9f2' } = {}) {
+    const corpo = especie === 'Gato' ? CAT : DOG;
+    return `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${especie === 'Gato' ? 'Ilustração de gato' : 'Ilustração de cachorro'}">
+      <rect width="64" height="64" fill="${fundo}"/>
+      ${anel ? '<circle cx="32" cy="34" r="25" fill="#fff"/><circle cx="32" cy="34" r="25" fill="none" stroke="#e48bb4" stroke-width="2.2"/><circle cx="32" cy="34" r="21.5" fill="none" stroke="#f3c3d9" stroke-width="1"/>' : ''}
+      <g transform="translate(32 34) scale(.72) translate(-34 -35)">${corpo}</g>
+    </svg>`;
+  }
+
+  const LOGO = `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="30" fill="#fff"/>
+      <circle cx="32" cy="32" r="29" fill="none" stroke="#c9518a" stroke-width="3"/>
+      <circle cx="32" cy="32" r="24.5" fill="none" stroke="#e48bb4" stroke-width="1.4" stroke-dasharray="3 2.2"/>
+      <g transform="translate(32 33) scale(.68) translate(-35 -35)">${DOG}</g>
+    </svg>`;
+
+  const HERO = `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="96" fill="#fbe9f2"/>
+      <circle cx="100" cy="100" r="84" fill="#fff"/>
+      <circle cx="100" cy="100" r="84" fill="none" stroke="#c9518a" stroke-width="5"/>
+      <circle cx="100" cy="100" r="72" fill="none" stroke="#e48bb4" stroke-width="2" stroke-dasharray="6 5"/>
+      <g transform="translate(100 104) scale(2.1) translate(-35 -35)">${DOG}</g>
+      <path d="M160 40c-4-6-13-3-12 4 1 6 12 12 12 12s11-6 12-12c1-7-8-10-12-4z" fill="#c9518a"/>
+      <path d="M34 150c-3-4.5-10-2.3-9 3 .8 4.5 9 9 9 9s8.2-4.5 9-9c.8-5.3-6-7.5-9-3z" fill="#3e6db5"/>
+    </svg>`;
+
+  function fotoOuArte(animal, i = 0) {
+    const f = animal.fotos && animal.fotos[i];
+    return f ? `<img src="${f}" alt="Foto de ${esc(animal.nome)}" loading="lazy">` : arte(animal.especie);
+  }
+
+  function classeStatus(s) {
+    return {
+      'Disponível para adoção': 'status--disponivel',
+      'Em processo de adoção': 'status--processo',
+      'Adotado': 'status--adotado',
+      'Pendente': 'status--pendente',
+      'Concluído': 'status--concluido'
+    }[s] || '';
+  }
+  const status = s => `<span class="status ${classeStatus(s)}">${esc(s)}</span>`;
+
+  const data = iso => iso ? new Date(iso).toLocaleDateString('pt-BR') : '—';
+
+  let toastTimer;
+  function toast(msg, tipo) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.toggle('erro-toast', tipo === 'erro');
+    t.classList.add('visivel');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('visivel'), 3200);
+  }
+
+  // Diálogo de confirmação (RF21, RF23)
+  function confirmar({ titulo, texto, botao = 'Confirmar', perigo = true }) {
+    return new Promise(resolve => {
+      const m = document.getElementById('modal-geral');
+      m.className = 'modal modal--estreito';
+      m.innerHTML = `<div class="modal__corpo"><h2 style="font-size:1.3rem">${esc(titulo)}</h2><p>${esc(texto)}</p></div>
+        <div class="modal__acoes">
+          <button class="btn btn--neutro" data-r="0">Cancelar</button>
+          <button class="btn ${perigo ? 'btn--perigo' : 'btn--primario'}" data-r="1">${esc(botao)}</button>
+        </div>`;
+      const fim = v => { m.close(); resolve(v); };
+      m.querySelectorAll('[data-r]').forEach(b => b.addEventListener('click', () => fim(b.dataset.r === '1')));
+      m.addEventListener('cancel', () => resolve(false), { once: true });
+      m.showModal();
+    });
+  }
+
+  // Reduz fotos antes de salvar (mantém o armazenamento leve)
+  function lerFoto(arquivo, max = 1000) {
+    return new Promise((resolve, reject) => {
+      if (!/^image\/(jpeg|png|webp|gif)$/.test(arquivo.type)) return reject(new Error('Envie uma imagem JPG, PNG, WEBP ou GIF.'));
+      if (arquivo.size > 15 * 1024 * 1024) return reject(new Error('Imagem muito grande (máx. 15 MB).'));
+      const leitor = new FileReader();
+      leitor.onerror = () => reject(new Error('Não foi possível ler a imagem.'));
+      leitor.onload = () => {
+        const img = new Image();
+        img.onerror = () => reject(new Error('Imagem inválida.'));
+        img.onload = () => {
+          const k = Math.min(1, max / Math.max(img.width, img.height));
+          const c = document.createElement('canvas');
+          c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+          c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+          resolve(c.toDataURL('image/jpeg', 0.8));
+        };
+        img.src = leitor.result;
+      };
+      leitor.readAsDataURL(arquivo);
+    });
+  }
+
+  // RF10 — link de WhatsApp configurável
+  function linkWhats(texto) {
+    const cfg = Store.config();
+    const numero = (cfg.whatsapp || '').replace(/\D/g, '');
+    const msg = encodeURIComponent(texto || cfg.mensagemWhats || '');
+    return numero ? `https://wa.me/${numero}?text=${msg}` : `https://wa.me/?text=${msg}`;
+  }
+
+  // Validação de campos com mensagem por erro (RNF07)
+  function mostrarErros(form, erros) {
+    form.querySelectorAll('[data-erro]').forEach(p => {
+      const nome = p.dataset.erro;
+      p.textContent = erros[nome] || '';
+      const campo = p.closest('.campo');
+      if (campo) campo.classList.toggle('invalido', !!erros[nome]);
+      const input = form.elements[nome];
+      if (input && input.setAttribute) {
+        if (erros[nome]) { input.setAttribute('aria-invalid', 'true'); input.setAttribute('aria-describedby', p.id || ''); }
+        else input.removeAttribute('aria-invalid');
+      }
+    });
+    const primeiro = Object.keys(erros)[0];
+    if (primeiro && form.elements[primeiro] && form.elements[primeiro].focus) form.elements[primeiro].focus();
+    return Object.keys(erros).length === 0;
+  }
+
+  const emailValido = e => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);
+  const telefoneValido = t => { const d = t.replace(/\D/g, ''); return d.length >= 10 && d.length <= 13; };
+
+  window.UI = { esc, arte, LOGO, HERO, fotoOuArte, status, data, toast, confirmar, lerFoto, linkWhats, mostrarErros, emailValido, telefoneValido };
+})();
+
+</script>
+  <script>
+/* =========================================================
+   publico.js — área pública
+   Catálogo (RF08, RF09), filtros (RF18), WhatsApp (RF10),
+   formulário de interesse (RF11–RF13, RNF07)
+   ========================================================= */
+(function () {
+  const { esc } = UI;
+
+  function renderCatalogo() {
+    const grade = document.getElementById('grade-publica');
+    const contagem = document.getElementById('contagem-publica');
+    const f = document.getElementById('filtros');
+    const especie = f.especie.value;
+    const porte = f.porte.value;
+
+    let lista;
+    try {
+      lista = Store.animaisDisponiveis()
+        .filter(a => !especie || a.especie === especie)
+        .filter(a => !porte || a.porte === porte);
+    } catch (e) {
+      grade.innerHTML = `<div class="vazio"><strong>Não foi possível carregar os animais.</strong>Tente recarregar a página.</div>`;
+      return;
+    }
+
+    const total = Store.animaisDisponiveis().length;
+    contagem.textContent = total === 1 ? '1 peludinho esperando um lar' : `${total} peludinhos esperando um lar`;
+
+    if (!lista.length) {
+      grade.innerHTML = total
+        ? `<div class="vazio"><strong>Nenhum animal com esses filtros.</strong>Tente outra espécie ou porte.</div>`
+        : `<div class="vazio"><strong>No momento não há animais disponíveis.</strong>Acompanhe o Instagram para novidades.</div>`;
+      return;
+    }
+
+    grade.innerHTML = lista.map(a => `
+      <button class="cartao" data-codigo="${esc(a.codigo)}" aria-label="Ver ficha de ${esc(a.nome)}">
+        <div class="cartao__foto">${UI.fotoOuArte(a)}<span class="cartao__codigo">${esc(a.codigo)}</span></div>
+        <div class="cartao__corpo">
+          <p class="cartao__nome">${esc(a.nome)}</p>
+          <div class="chips">
+            <span class="chip">${esc(a.especie)}</span>
+            <span class="chip">${esc(a.sexo)}</span>
+            <span class="chip chip--rosa">${esc(a.porte)}</span>
+            <span class="chip chip--rosa">${esc(a.idade)}</span>
+          </div>
+        </div>
+      </button>`).join('');
+  }
+
+  function abrirFicha(codigo) {
+    const a = Store.animalPorCodigo(codigo);
+    const m = document.getElementById('modal-animal');
+    // só mostra fichas de animais disponíveis na área pública
+    if (!a || a.situacao !== 'Disponível para adoção') { UI.toast('Este animal não está mais disponível.', 'erro'); return; }
+
+    const fotos = a.fotos && a.fotos.length ? a.fotos : [];
+    const texto = `Olá! Tenho interesse em adotar ${a.nome} (código ${a.codigo}). Pode me passar mais informações?`;
+
+    m.innerHTML = `
+      <button class="modal__fechar" aria-label="Fechar">×</button>
+      <div class="ficha">
+        <div class="ficha__galeria">
+          <div class="ficha__principal" id="ficha-principal">${UI.fotoOuArte(a, 0)}</div>
+          ${fotos.length > 1 ? `<div class="ficha__miniaturas">${fotos.map((f, i) =>
+            `<button data-i="${i}" aria-label="Foto ${i + 1}" ${i === 0 ? 'aria-current="true"' : ''}><img src="${f}" alt=""></button>`).join('')}</div>` : ''}
+        </div>
+        <div class="ficha__info">
+          <span class="ficha__codigo">CÓDIGO ${esc(a.codigo)}</span>
+          <h2 id="ma-titulo" style="margin:0">${esc(a.nome)}</h2>
+          <dl class="dados">
+            <dt>Espécie</dt><dd>${esc(a.especie)}</dd>
+            <dt>Sexo</dt><dd>${esc(a.sexo)}</dd>
+            <dt>Idade aprox.</dt><dd>${esc(a.idade)}</dd>
+            <dt>Porte</dt><dd>${esc(a.porte)}</dd>
+          </dl>
+          ${a.caracteristicas ? `<div><h3>Sobre</h3><p style="margin:0">${esc(a.caracteristicas)}</p></div>` : ''}
+          ${a.saude ? `<div><h3>Saúde e cuidados</h3><p style="margin:0">${esc(a.saude)}</p></div>` : ''}
+          <div class="ficha__acoes">
+            <button class="btn btn--primario" data-acao="interesse">Quero adotar ${esc(a.nome)}</button>
+            <a class="btn btn--whats" href="${UI.linkWhats(texto)}" target="_blank" rel="noopener">Conversar no WhatsApp</a>
+          </div>
+        </div>
+      </div>`;
+
+    m.querySelector('.modal__fechar').addEventListener('click', () => m.close());
+    m.querySelectorAll('.ficha__miniaturas button').forEach(b => b.addEventListener('click', () => {
+      m.querySelector('#ficha-principal').innerHTML = UI.fotoOuArte(a, +b.dataset.i);
+      m.querySelectorAll('.ficha__miniaturas button').forEach(x => x.removeAttribute('aria-current'));
+      b.setAttribute('aria-current', 'true');
+    }));
+    m.querySelector('[data-acao="interesse"]').addEventListener('click', () => {
+      m.close();
+      const form = document.getElementById('form-interesse');
+      form.codigo.value = a.codigo;
+      document.getElementById('interesse').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => form.nome.focus({ preventScroll: true }), 400);
+    });
+    m.addEventListener('click', e => { if (e.target === m) m.close(); });
+    m.showModal();
+  }
+
+  function validarInteresse(form) {
+    const v = n => form.elements[n].value.trim();
+    const erros = {};
+    if (!v('nome')) erros.nome = 'Informe seu nome completo.';
+    else if (v('nome').split(/\s+/).length < 2) erros.nome = 'Informe nome e sobrenome.';
+    if (!v('telefone')) erros.telefone = 'Informe um telefone ou WhatsApp.';
+    else if (!UI.telefoneValido(v('telefone'))) erros.telefone = 'Telefone inválido. Use DDD + número, ex.: (47) 99999-9999.';
+    if (!v('email')) erros.email = 'Informe seu e-mail.';
+    else if (!UI.emailValido(v('email'))) erros.email = 'E-mail inválido. Ex.: nome@email.com';
+    if (!v('cidade')) erros.cidade = 'Informe a cidade onde você mora.';
+    if (v('codigo')) {
+      const a = Store.animalPorCodigo(v('codigo'));
+      if (!a || a.situacao !== 'Disponível para adoção') erros.codigo = 'Código não encontrado entre os animais disponíveis. Deixe em branco se não souber.';
+    }
+    return UI.mostrarErros(form, erros);
+  }
+
+  function enviarInteresse(e) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    if (!validarInteresse(form)) return;
+    const v = n => form.elements[n].value.trim();
+    try {
+      Store.criarSolicitacao({
+        nome: v('nome'), telefone: v('telefone'), email: v('email'), cidade: v('cidade'),
+        codigoAnimal: v('codigo') ? Store.animalPorCodigo(v('codigo')).codigo : ''
+      });
+      form.reset();
+      UI.mostrarErros(form, {});
+      UI.toast('Interesse enviado! A protetora entrará em contato em breve. 🩷');
+    } catch (err) {
+      UI.toast('Sua solicitação não foi registrada. ' + err.message, 'erro');
+    }
+  }
+
+  function atualizarLinksWhats() {
+    document.querySelectorAll('.js-whats').forEach(a => { a.href = UI.linkWhats(); });
+  }
+
+  function iniciar() {
+    document.querySelector('.marca__logo').innerHTML = UI.LOGO;
+    document.querySelector('.hero__circulo').innerHTML = UI.HERO;
+
+    document.getElementById('filtros').addEventListener('change', renderCatalogo);
+    document.getElementById('grade-publica').addEventListener('click', e => {
+      const c = e.target.closest('.cartao');
+      if (c) abrirFicha(c.dataset.codigo);
+    });
+    const form = document.getElementById('form-interesse');
+    form.querySelectorAll('[data-erro]').forEach(p => { p.id = 'erro-' + p.dataset.erro; });
+    form.addEventListener('submit', enviarInteresse);
+    // limpa o erro do campo ao corrigir
+    form.addEventListener('input', e => {
+      const c = e.target.closest('.campo');
+      if (c && c.classList.contains('invalido')) {
+        c.classList.remove('invalido');
+        const p = c.querySelector('.erro'); if (p) p.textContent = '';
+      }
+    });
+  }
+
+  window.Publico = {
+    iniciar,
+    render() { renderCatalogo(); atualizarLinksWhats(); }
+  };
+})();
+
+</script>
+  <script>
+/* =========================================================
+   admin.js — área administrativa (somente usuários autenticados)
+   Gestão de animais (RF01–RF07, RF21), solicitações (RF14,
+   RF15, RF22, RF23), adoções (RF16, RF17), equipe (RF19, RF20)
+   ========================================================= */
+(function () {
+  const { esc } = UI;
+  const raiz = () => document.getElementById('view-admin');
+  let aba = 'animais';
+  const filtrosAdm = { busca: '', situacao: '', solSituacao: '' };
+
+  /* ---------------- Modal de formulário genérico ---------------- */
+  function abrirForm({ titulo, corpo, botao = 'Salvar', largo = false, aoAbrir, aoEnviar }) {
+    const m = document.getElementById('modal-geral');
+    m.className = 'modal' + (largo ? '' : ' modal--estreito');
+    m.innerHTML = `
+      <button class="modal__fechar" type="button" aria-label="Fechar">×</button>
+      <form novalidate>
+        <div class="modal__corpo"><h2 style="font-size:1.35rem">${esc(titulo)}</h2>${corpo}</div>
+        <div class="modal__acoes">
+          <button type="button" class="btn btn--neutro" data-cancelar>Cancelar</button>
+          <button type="submit" class="btn btn--primario">${esc(botao)}</button>
+        </div>
+      </form>`;
+    const form = m.querySelector('form');
+    form.querySelectorAll('[data-erro]').forEach(p => { p.id = 'merro-' + p.dataset.erro; });
+    m.querySelector('.modal__fechar').onclick = () => m.close();
+    m.querySelector('[data-cancelar]').onclick = () => m.close();
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      try {
+        const ok = await aoEnviar(form);
+        if (ok !== false) { m.close(); render(); }
+      } catch (err) { UI.toast(err.message, 'erro'); }
+    });
+    if (aoAbrir) aoAbrir(form, m);
+    m.showModal();
+  }
+
+  const campo = (nome, rotulo, input, obrig = true) => `
+    <div class="campo"><label for="c-${nome}">${rotulo}${obrig ? ' <span class="obrig">*</span>' : ''}</label>${input}<p class="erro" data-erro="${nome}"></p></div>`;
+  const opcoes = (lista, atual) => lista.map(o => `<option ${o === atual ? 'selected' : ''}>${esc(o)}</option>`).join('');
+
+  /* ---------------- Login / primeiro acesso ---------------- */
+  function renderLogin() {
+    const configurar = Auth.precisaConfigurar();
+    raiz().innerHTML = `
+      <div class="login">
+        <div class="login__caixa">
+          <div style="width:64px;height:64px;margin-bottom:12px">${UI.LOGO}</div>
+          <h1>${configurar ? 'Primeiro acesso' : 'Área da equipe'}</h1>
+          <p class="sutil">${configurar
+            ? 'Crie o acesso da responsável pela iniciativa. Depois, ela poderá cadastrar os colaboradores.'
+            : 'Entre com seu e-mail e senha individuais.'}</p>
+          <form id="form-login" class="form" novalidate>
+            ${configurar ? campo('nome', 'Nome', '<input id="c-nome" name="nome" autocomplete="name">') : ''}
+            ${campo('email', 'E-mail', '<input id="c-email" name="email" type="email" autocomplete="username">')}
+            ${campo('senha', 'Senha', `<input id="c-senha" name="senha" type="password" autocomplete="${configurar ? 'new-password' : 'current-password'}">`)}
+            ${configurar ? campo('senha2', 'Confirmar senha', '<input id="c-senha2" name="senha2" type="password" autocomplete="new-password">') : ''}
+            <button class="btn btn--primario" type="submit">${configurar ? 'Criar acesso e entrar' : 'Entrar'}</button>
+          </form>
+          <p style="margin:16px 0 0;text-align:center"><a href="#/">← Voltar ao site</a></p>
+        </div>
+      </div>`;
+
+    const form = raiz().querySelector('#form-login');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const v = n => (form.elements[n] ? form.elements[n].value.trim() : '');
+      const erros = {};
+      if (configurar && !v('nome')) erros.nome = 'Informe o nome.';
+      if (!UI.emailValido(v('email'))) erros.email = 'Informe um e-mail válido.';
+      if (!form.elements.senha.value) erros.senha = 'Informe a senha.';
+      else if (configurar && form.elements.senha.value.length < 8) erros.senha = 'A senha deve ter pelo menos 8 caracteres.';
+      if (configurar && form.elements.senha.value !== form.elements.senha2.value) erros.senha2 = 'As senhas não conferem.';
+      if (!UI.mostrarErros(form, erros)) return;
+      try {
+        if (configurar) await Auth.criarAcesso({ nome: v('nome'), email: v('email'), senha: form.elements.senha.value, perfil: 'responsavel' });
+        await Auth.entrar(v('email'), form.elements.senha.value);
+        render();
+      } catch (err) {
+        UI.mostrarErros(form, { senha: err.message });
+      }
+    });
+  }
+
+  /* ---------------- Painel ---------------- */
+  function renderPainel() {
+    const u = Auth.atual();
+    const animais = Store.animais();
+    const sols = Store.solicitacoes();
+    const pendentes = sols.filter(s => s.situacao === 'Pendente').length;
+    const conta = s => animais.filter(a => a.situacao === s).length;
+
+    const abas = [
+      ['animais', 'Animais'],
+      ['solicitacoes', `Solicitações${pendentes ? ` <span class="contador">${pendentes}</span>` : ''}`],
+      ['adocoes', 'Adoções'],
+      ...(u.perfil === 'responsavel' ? [['equipe', 'Equipe']] : []),
+      ['config', 'Configurações']
+    ];
+    if (!abas.some(([id]) => id === aba)) aba = 'animais';
+
+    raiz().innerHTML = `
+      <div class="admin container">
+        <div class="admin__topo">
+          <h1>Área da equipe</h1>
+          <div class="admin__usuario">
+            <span>${esc(u.nome)} · ${u.perfil === 'responsavel' ? 'Responsável' : 'Colaborador(a)'}</span>
+            <button class="btn btn--neutro btn--pequeno" id="btn-sair">Sair</button>
+          </div>
+        </div>
+        <div class="resumo">
+          <div class="resumo__item"><span>Disponíveis</span><strong>${conta('Disponível para adoção')}</strong></div>
+          <div class="resumo__item"><span>Em processo</span><strong>${conta('Em processo de adoção')}</strong></div>
+          <div class="resumo__item"><span>Adotados</span><strong>${conta('Adotado')}</strong></div>
+          <div class="resumo__item"><span>Solicitações pendentes</span><strong>${pendentes}</strong></div>
+        </div>
+        <div class="abas" role="tablist">
+          ${abas.map(([id, rot]) => `<button role="tab" data-aba="${id}" aria-selected="${id === aba}">${rot}</button>`).join('')}
+        </div>
+        <div id="conteudo-aba"></div>
+      </div>`;
+
+    raiz().querySelector('#btn-sair').onclick = () => { Auth.sair(); location.hash = '#/'; };
+    raiz().querySelectorAll('[data-aba]').forEach(b => b.onclick = () => { aba = b.dataset.aba; render(); });
+
+    const alvo = raiz().querySelector('#conteudo-aba');
+    ({ animais: abaAnimais, solicitacoes: abaSolicitacoes, adocoes: abaAdocoes, equipe: abaEquipe, config: abaConfig })[aba](alvo);
+  }
+
+  /* ---------------- Aba: Animais ---------------- */
+  function abaAnimais(el) {
+    const b = filtrosAdm.busca.toLowerCase();
+    const lista = Store.animais()
+      .filter(a => !filtrosAdm.situacao || a.situacao === filtrosAdm.situacao)
+      .filter(a => !b || a.nome.toLowerCase().includes(b) || a.codigo.toLowerCase().includes(b))
+      .sort((x, y) => x.codigo.localeCompare(y.codigo));
+
+    el.innerHTML = `
+      <div class="barra">
+        <div class="filtros">
+          <label class="campo-mini"><span>Buscar</span><input id="f-busca" placeholder="Nome ou código" value="${esc(filtrosAdm.busca)}"></label>
+          <label class="campo-mini"><span>Situação</span>
+            <select id="f-situacao"><option value="">Todas</option>${opcoes(Store.SITUACOES_ANIMAL, filtrosAdm.situacao)}</select></label>
+        </div>
+        <button class="btn btn--primario" id="novo-animal">+ Cadastrar animal</button>
+      </div>
+      <div class="tabela-wrap">
+        <table class="tabela">
+          <thead><tr><th>Animal</th><th>Código</th><th>Espécie</th><th>Sexo</th><th>Idade</th><th>Porte</th><th>Situação</th><th></th></tr></thead>
+          <tbody>
+            ${lista.length ? lista.map(a => `
+              <tr>
+                <td><div class="nome-cel"><span class="mini-foto">${UI.fotoOuArte(a)}</span>${esc(a.nome)}</div></td>
+                <td>${esc(a.codigo)}</td><td>${esc(a.especie)}</td><td>${esc(a.sexo)}</td><td>${esc(a.idade)}</td><td>${esc(a.porte)}</td>
+                <td>${UI.status(a.situacao)}</td>
+                <td><div class="acoes">
+                  <button class="btn btn--neutro btn--pequeno" data-ver="${a.id}">Ficha</button>
+                  <button class="btn btn--neutro btn--pequeno" data-editar="${a.id}">Editar</button>
+                  <button class="btn btn--perigo btn--pequeno" data-excluir="${a.id}">Excluir</button>
+                </div></td>
+              </tr>`).join('') : `<tr class="linha-vazia"><td colspan="8">Nenhum animal encontrado.</td></tr>`}
+          </tbody>
+        </table>
+      </div>`;
+
+    const busca = el.querySelector('#f-busca');
+    busca.oninput = () => { filtrosAdm.busca = busca.value; abaAnimais(el); const n = el.querySelector('#f-busca'); n.focus(); n.setSelectionRange(n.value.length, n.value.length); };
+    el.querySelector('#f-situacao').onchange = e => { filtrosAdm.situacao = e.target.value; abaAnimais(el); };
+    el.querySelector('#novo-animal').onclick = () => formAnimal();
+    el.querySelectorAll('[data-editar]').forEach(x => x.onclick = () => formAnimal(Store.animal(x.dataset.editar)));
+    el.querySelectorAll('[data-ver]').forEach(x => x.onclick = () => fichaAdmin(Store.animal(x.dataset.ver)));
+    el.querySelectorAll('[data-excluir]').forEach(x => x.onclick = async () => {
+      const a = Store.animal(x.dataset.excluir);
+      const ok = await UI.confirmar({ titulo: `Excluir ${a.nome}?`, texto: `O cadastro ${a.codigo} será removido permanentemente. Esta ação não pode ser desfeita.`, botao: 'Excluir' });
+      if (!ok) return;
+      try { Store.excluirAnimal(a.id); UI.toast('Cadastro excluído.'); render(); }
+      catch (err) { UI.toast(err.message, 'erro'); }
+    });
+  }
+
+  function formAnimal(animal) {
+    const a = animal || { nome: '', especie: '', sexo: '', idade: '', porte: '', caracteristicas: '', saude: '', situacao: 'Disponível para adoção', fotos: [] };
+    let fotos = (a.fotos || []).slice();
+
+    abrirForm({
+      titulo: animal ? `Editar ${a.nome} (${a.codigo})` : 'Cadastrar animal',
+      largo: true,
+      botao: animal ? 'Salvar alterações' : 'Cadastrar',
+      corpo: `
+        ${animal ? '' : '<p class="nota">O código do animal é gerado automaticamente ao salvar.</p>'}
+        <div class="form__linha form__linha--2">
+          ${campo('nome', 'Nome', `<input id="c-nome" name="nome" value="${esc(a.nome)}">`)}
+          ${campo('situacao', 'Situação', `<select id="c-situacao" name="situacao">${opcoes(Store.SITUACOES_ANIMAL, a.situacao)}</select>`)}
+        </div>
+        <div class="form__linha form__linha--2">
+          ${campo('especie', 'Espécie', `<select id="c-especie" name="especie"><option value="">Selecione</option>${opcoes(['Cão', 'Gato'], a.especie)}</select>`)}
+          ${campo('sexo', 'Sexo', `<select id="c-sexo" name="sexo"><option value="">Selecione</option>${opcoes(['Macho', 'Fêmea'], a.sexo)}</select>`)}
+        </div>
+        <div class="form__linha form__linha--2">
+          ${campo('idade', 'Idade aproximada', `<input id="c-idade" name="idade" placeholder="Ex.: 2 anos, 6 meses" value="${esc(a.idade)}">`)}
+          ${campo('porte', 'Porte', `<select id="c-porte" name="porte"><option value="">Selecione</option>${opcoes(['Pequeno', 'Médio', 'Grande'], a.porte)}</select>`)}
+        </div>
+        ${campo('caracteristicas', 'Características', `<textarea id="c-caracteristicas" name="caracteristicas" placeholder="Temperamento, cor, convivência com outros animais…">${esc(a.caracteristicas)}</textarea>`)}
+        ${campo('saude', 'Saúde e cuidados', `<textarea id="c-saude" name="saude" placeholder="Vacinas, vermifugação, castração, tratamentos, cuidados especiais…">${esc(a.saude)}</textarea>`, false)}
+        <div class="campo">
+          <label>Fotografias <span class="opcional">(a primeira é a principal)</span></label>
+          <div class="fotos-edicao" id="fotos-edicao"></div>
+          <p class="erro" data-erro="fotos"></p>
+        </div>`,
+      aoAbrir(form) {
+        const box = form.querySelector('#fotos-edicao');
+        const desenhar = () => {
+          box.innerHTML = fotos.map((f, i) => `
+            <div class="fotos-edicao__item"><img src="${f}" alt="Foto ${i + 1}">
+              <button type="button" data-rm="${i}" aria-label="Remover foto ${i + 1}">×</button></div>`).join('') +
+            `<label class="fotos-edicao__add">+ Foto<input type="file" accept="image/*" multiple></label>`;
+          box.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { fotos.splice(+b.dataset.rm, 1); desenhar(); });
+          box.querySelector('input[type=file]').onchange = async e => {
+            for (const arq of e.target.files) {
+              try { fotos.push(await UI.lerFoto(arq)); }
+              catch (err) { UI.toast(err.message, 'erro'); }
+            }
+            desenhar();
+          };
+        };
+        desenhar();
+      },
+      aoEnviar(form) {
+        const v = n => form.elements[n].value.trim();
+        const erros = {};
+        if (!v('nome')) erros.nome = 'Informe o nome.';
+        if (!v('especie')) erros.especie = 'Selecione a espécie.';
+        if (!v('sexo')) erros.sexo = 'Selecione o sexo.';
+        if (!v('idade')) erros.idade = 'Informe a idade aproximada.';
+        if (!v('porte')) erros.porte = 'Selecione o porte.';
+        if (!v('caracteristicas')) erros.caracteristicas = 'Descreva as características.';
+        if (!UI.mostrarErros(form, erros)) return false;
+        const salvo = Store.salvarAnimal({
+          ...(animal ? { id: animal.id } : {}),
+          nome: v('nome'), especie: v('especie'), sexo: v('sexo'), idade: v('idade'), porte: v('porte'),
+          caracteristicas: v('caracteristicas'), saude: v('saude'), situacao: v('situacao'), fotos
+        });
+        UI.toast(animal ? 'Alterações salvas.' : `Cadastro de ${salvo.nome} salvo com o código ${salvo.codigo}.`);
+      }
+    });
+  }
+
+  function fichaAdmin(a) {
+    const m = document.getElementById('modal-geral');
+    const sols = Store.solicitacoes().filter(s => s.codigoAnimal === a.codigo);
+    const ad = Store.adocoes().find(x => x.animalId === a.id);
+    m.className = 'modal';
+    m.innerHTML = `
+      <button class="modal__fechar" aria-label="Fechar">×</button>
+      <div class="ficha">
+        <div class="ficha__galeria"><div class="ficha__principal">${UI.fotoOuArte(a)}</div>
+          ${a.fotos.length > 1 ? `<div class="ficha__miniaturas">${a.fotos.map(f => `<button disabled><img src="${f}" alt=""></button>`).join('')}</div>` : ''}
+        </div>
+        <div class="ficha__info">
+          <span class="ficha__codigo">CÓDIGO ${esc(a.codigo)}</span>
+          <h2 style="margin:0">${esc(a.nome)}</h2>
+          <div>${UI.status(a.situacao)}</div>
+          <dl class="dados">
+            <dt>Espécie</dt><dd>${esc(a.especie)}</dd><dt>Sexo</dt><dd>${esc(a.sexo)}</dd>
+            <dt>Idade aprox.</dt><dd>${esc(a.idade)}</dd><dt>Porte</dt><dd>${esc(a.porte)}</dd>
+            <dt>Cadastrado em</dt><dd>${UI.data(a.criadoEm)}</dd>
+          </dl>
+          <div><h3>Características</h3><p style="margin:0">${esc(a.caracteristicas) || '—'}</p></div>
+          <div><h3>Saúde e cuidados</h3><p style="margin:0">${esc(a.saude) || '—'}</p></div>
+          <div><h3>Solicitações (${sols.length})</h3>${sols.length ? `<p style="margin:0">${sols.map(s => `${esc(s.nome)} — ${UI.status(s.situacao)}`).join('<br>')}</p>` : '<p class="sutil" style="margin:0">Nenhuma.</p>'}</div>
+          ${ad ? `<div><h3>Adoção</h3><p style="margin:0">Adotado por <strong>${esc(ad.adotante)}</strong> em ${UI.data(ad.data)}.</p></div>` : ''}
+          <div class="ficha__acoes"><button class="btn btn--primario" data-editar>Editar cadastro</button></div>
+        </div>
+      </div>`;
+    m.querySelector('.modal__fechar').onclick = () => m.close();
+    m.querySelector('[data-editar]').onclick = () => { m.close(); formAnimal(a); };
+    m.showModal();
+  }
+
+  /* ---------------- Aba: Solicitações ---------------- */
+  function abaSolicitacoes(el) {
+    const lista = Store.solicitacoes().filter(s => !filtrosAdm.solSituacao || s.situacao === filtrosAdm.solSituacao);
+    el.innerHTML = `
+      <p class="nota">Dados pessoais protegidos (LGPD): visíveis apenas para a equipe autorizada.</p>
+      <div class="barra">
+        <div class="filtros">
+          <label class="campo-mini"><span>Situação</span>
+            <select id="f-sol"><option value="">Todas</option>${opcoes(Store.SITUACOES_SOLICITACAO, filtrosAdm.solSituacao)}</select></label>
+        </div>
+      </div>
+      <div class="tabela-wrap">
+        <table class="tabela">
+          <thead><tr><th>Data</th><th>Interessado(a)</th><th>Contato</th><th>Cidade</th><th>Animal</th><th>Situação</th><th></th></tr></thead>
+          <tbody>
+            ${lista.length ? lista.map(s => {
+              const an = s.codigoAnimal ? Store.animalPorCodigo(s.codigoAnimal) : null;
+              const telLimpo = s.telefone.replace(/\D/g, '');
+              return `<tr>
+                <td>${UI.data(s.data)}</td>
+                <td><strong>${esc(s.nome)}</strong></td>
+                <td><a href="https://wa.me/${telLimpo.length <= 11 ? '55' + telLimpo : telLimpo}" target="_blank" rel="noopener">${esc(s.telefone)}</a><br><span class="sutil">${esc(s.email)}</span></td>
+                <td>${esc(s.cidade)}</td>
+                <td>${an ? `${esc(an.nome)} <span class="sutil">(${esc(an.codigo)})</span>` : (s.codigoAnimal ? esc(s.codigoAnimal) : '<span class="sutil">Não informado</span>')}</td>
+                <td><select class="campo-mini" data-sit="${s.id}" aria-label="Situação da solicitação" style="border:1.5px solid var(--borda);border-radius:999px;padding:5px 10px;font:inherit;font-size:.85rem">
+                  ${opcoes(Store.SITUACOES_SOLICITACAO, s.situacao)}</select></td>
+                <td><div class="acoes">
+                  ${an && an.situacao !== 'Adotado' ? `<button class="btn btn--azul btn--pequeno" data-adotar="${s.id}">Registrar adoção</button>` : ''}
+                  <button class="btn btn--neutro btn--pequeno" data-editar="${s.id}">Editar</button>
+                  <button class="btn btn--perigo btn--pequeno" data-excluir="${s.id}">Excluir</button>
+                </div></td>
+              </tr>`;
+            }).join('') : `<tr class="linha-vazia"><td colspan="7">Nenhuma solicitação.</td></tr>`}
+          </tbody>
+        </table>
+      </div>`;
+
+    el.querySelector('#f-sol').onchange = e => { filtrosAdm.solSituacao = e.target.value; abaSolicitacoes(el); };
+    el.querySelectorAll('[data-sit]').forEach(sel => sel.onchange = () => {
+      try { Store.salvarSolicitacao({ id: sel.dataset.sit, situacao: sel.value }); UI.toast(`Situação atualizada para “${sel.value}”.`); render(); }
+      catch (err) { UI.toast(err.message, 'erro'); }
+    });
+    el.querySelectorAll('[data-editar]').forEach(x => x.onclick = () => formSolicitacao(Store.solicitacao(x.dataset.editar)));
+    el.querySelectorAll('[data-adotar]').forEach(x => x.onclick = () => formAdocao(Store.solicitacao(x.dataset.adotar)));
+    el.querySelectorAll('[data-excluir]').forEach(x => x.onclick = async () => {
+      const s = Store.solicitacao(x.dataset.excluir);
+      const ok = await UI.confirmar({ titulo: 'Excluir solicitação?', texto: `A solicitação de ${s.nome} será removida permanentemente.`, botao: 'Excluir' });
+      if (!ok) return;
+      try { Store.excluirSolicitacao(s.id); UI.toast('Solicitação excluída.'); render(); }
+      catch (err) { UI.toast(err.message, 'erro'); }
+    });
+  }
+
+  function formSolicitacao(s) {
+    abrirForm({
+      titulo: 'Editar dados do interessado',
+      corpo: `
+        ${campo('nome', 'Nome completo', `<input id="c-nome" name="nome" value="${esc(s.nome)}">`)}
+        ${campo('telefone', 'Telefone / WhatsApp', `<input id="c-telefone" name="telefone" value="${esc(s.telefone)}">`)}
+        ${campo('email', 'E-mail', `<input id="c-email" name="email" type="email" value="${esc(s.email)}">`)}
+        ${campo('cidade', 'Cidade', `<input id="c-cidade" name="cidade" value="${esc(s.cidade)}">`)}
+        ${campo('codigo', 'Código do animal', `<input id="c-codigo" name="codigo" value="${esc(s.codigoAnimal)}">`, false)}
+        ${campo('situacao', 'Situação', `<select id="c-situacao" name="situacao">${opcoes(Store.SITUACOES_SOLICITACAO, s.situacao)}</select>`)}`,
+      aoEnviar(form) {
+        const v = n => form.elements[n].value.trim();
+        const erros = {};
+        if (!v('nome')) erros.nome = 'Informe o nome.';
+        if (!UI.telefoneValido(v('telefone'))) erros.telefone = 'Telefone inválido.';
+        if (!UI.emailValido(v('email'))) erros.email = 'E-mail inválido.';
+        if (!v('cidade')) erros.cidade = 'Informe a cidade.';
+        if (v('codigo') && !Store.animalPorCodigo(v('codigo'))) erros.codigo = 'Código não encontrado.';
+        if (!UI.mostrarErros(form, erros)) return false;
+        Store.salvarSolicitacao({ id: s.id, nome: v('nome'), telefone: v('telefone'), email: v('email'), cidade: v('cidade'),
+          codigoAnimal: v('codigo') ? Store.animalPorCodigo(v('codigo')).codigo : '', situacao: v('situacao') });
+        UI.toast('Dados atualizados.');
+      }
+    });
+  }
+
+  /* ---------------- Aba: Adoções ---------------- */
+  function abaAdocoes(el) {
+    const lista = Store.adocoes();
+    el.innerHTML = `
+      <div class="barra">
+        <p class="sutil" style="margin:0">Histórico de adoções concluídas. Ao registrar, o animal passa para “Adotado” e sai do catálogo público.</p>
+        <button class="btn btn--primario" id="nova-adocao">+ Registrar adoção</button>
+      </div>
+      <div class="tabela-wrap">
+        <table class="tabela">
+          <thead><tr><th>Data</th><th>Animal</th><th>Adotante</th><th>Observações</th></tr></thead>
+          <tbody>
+            ${lista.length ? lista.map(ad => {
+              const a = Store.animal(ad.animalId);
+              return `<tr>
+                <td>${UI.data(ad.data)}</td>
+                <td>${a ? `<div class="nome-cel"><span class="mini-foto">${UI.fotoOuArte(a)}</span>${esc(a.nome)} <span class="sutil">(${esc(a.codigo)})</span></div>` : '—'}</td>
+                <td>${esc(ad.adotante)}</td>
+                <td>${esc(ad.observacoes) || '<span class="sutil">—</span>'}</td>
+              </tr>`;
+            }).join('') : `<tr class="linha-vazia"><td colspan="4">Nenhuma adoção registrada ainda.</td></tr>`}
+          </tbody>
+        </table>
+      </div>`;
+    el.querySelector('#nova-adocao').onclick = () => formAdocao();
+  }
+
+  function formAdocao(solicitacao) {
+    const adotados = new Set(Store.adocoes().map(a => a.animalId));
+    const candidatos = Store.animais().filter(a => !adotados.has(a.id) && a.situacao !== 'Adotado');
+    if (!candidatos.length) { UI.toast('Não há animais disponíveis ou em processo para registrar adoção.', 'erro'); return; }
+    const animalPre = solicitacao && solicitacao.codigoAnimal ? Store.animalPorCodigo(solicitacao.codigoAnimal) : null;
+    const pendentes = Store.solicitacoes().filter(s => s.situacao === 'Pendente' || (solicitacao && s.id === solicitacao.id));
+    const hojeISO = new Date().toISOString().slice(0, 10);
+
+    abrirForm({
+      titulo: 'Registrar adoção concluída',
+      botao: 'Registrar adoção',
+      corpo: `
+        ${campo('animal', 'Animal', `<select id="c-animal" name="animal"><option value="">Selecione</option>${candidatos.map(a =>
+          `<option value="${a.id}" ${animalPre && animalPre.id === a.id ? 'selected' : ''}>${esc(a.nome)} (${esc(a.codigo)}) — ${esc(a.situacao)}</option>`).join('')}</select>`)}
+        ${campo('solicitacao', 'Solicitação relacionada', `<select id="c-solicitacao" name="solicitacao"><option value="">Nenhuma</option>${pendentes.map(s =>
+          `<option value="${s.id}" ${solicitacao && solicitacao.id === s.id ? 'selected' : ''}>${esc(s.nome)} — ${UI.data(s.data)}</option>`).join('')}</select>`, false)}
+        ${campo('adotante', 'Nome do(a) adotante', `<input id="c-adotante" name="adotante" value="${solicitacao ? esc(solicitacao.nome) : ''}">`)}
+        ${campo('data', 'Data da adoção', `<input id="c-data" name="data" type="date" value="${hojeISO}" max="${hojeISO}">`)}
+        ${campo('observacoes', 'Observações', '<textarea id="c-observacoes" name="observacoes"></textarea>', false)}`,
+      aoAbrir(form) {
+        form.elements.solicitacao.onchange = () => {
+          const s = Store.solicitacao(form.elements.solicitacao.value);
+          if (s) {
+            form.elements.adotante.value = s.nome;
+            const an = s.codigoAnimal && Store.animalPorCodigo(s.codigoAnimal);
+            if (an && candidatos.some(c => c.id === an.id)) form.elements.animal.value = an.id;
+          }
+        };
+      },
+      aoEnviar(form) {
+        const v = n => form.elements[n].value.trim();
+        const erros = {};
+        if (!v('animal')) erros.animal = 'Selecione o animal adotado.';
+        if (!v('adotante')) erros.adotante = 'Informe o nome do(a) adotante.';
+        if (!v('data')) erros.data = 'Informe a data.';
+        if (!UI.mostrarErros(form, erros)) return false;
+        Store.registrarAdocao({
+          animalId: v('animal'), adotante: v('adotante'), solicitacaoId: v('solicitacao'),
+          data: new Date(v('data') + 'T12:00:00').toISOString(), observacoes: v('observacoes')
+        });
+        aba = 'adocoes';
+        UI.toast('Adoção registrada! 🎉');
+      }
+    });
+  }
+
+  /* ---------------- Aba: Equipe (somente responsável) ---------------- */
+  function abaEquipe(el) {
+    const eu = Auth.atual();
+    const lista = Store.usuarios();
+    el.innerHTML = `
+      <div class="barra">
+        <p class="sutil" style="margin:0">Cada pessoa da equipe tem e-mail e senha individuais.</p>
+        <button class="btn btn--primario" id="novo-colab">+ Cadastrar colaborador(a)</button>
+      </div>
+      <div class="tabela-wrap">
+        <table class="tabela">
+          <thead><tr><th>Nome</th><th>E-mail</th><th>Perfil</th><th>Desde</th><th></th></tr></thead>
+          <tbody>${lista.map(u => `
+            <tr><td><strong>${esc(u.nome)}</strong>${u.id === eu.id ? ' <span class="sutil">(você)</span>' : ''}</td>
+              <td>${esc(u.email)}</td>
+              <td>${u.perfil === 'responsavel' ? '<span class="status status--processo">Responsável</span>' : '<span class="status status--adotado">Colaborador(a)</span>'}</td>
+              <td>${UI.data(u.criadoEm)}</td>
+              <td><div class="acoes">${u.perfil !== 'responsavel' ? `<button class="btn btn--perigo btn--pequeno" data-rm="${u.id}">Remover acesso</button>` : ''}</div></td>
+            </tr>`).join('')}</tbody>
+        </table>
+      </div>`;
+
+    el.querySelector('#novo-colab').onclick = () => abrirForm({
+      titulo: 'Cadastrar colaborador(a)',
+      botao: 'Criar acesso',
+      corpo: `
+        ${campo('nome', 'Nome', '<input id="c-nome" name="nome" autocomplete="off">')}
+        ${campo('email', 'E-mail', '<input id="c-email" name="email" type="email" autocomplete="off">')}
+        ${campo('senha', 'Senha inicial (mín. 8 caracteres)', '<input id="c-senha" name="senha" type="password" autocomplete="new-password">')}`,
+      async aoEnviar(form) {
+        const v = n => form.elements[n].value.trim();
+        const erros = {};
+        if (!v('nome')) erros.nome = 'Informe o nome.';
+        if (!UI.emailValido(v('email'))) erros.email = 'E-mail inválido.';
+        else if (Store.usuarioPorEmail(v('email'))) erros.email = 'Já existe um usuário com este e-mail.';
+        if (form.elements.senha.value.length < 8) erros.senha = 'A senha deve ter pelo menos 8 caracteres.';
+        if (!UI.mostrarErros(form, erros)) return false;
+        await Auth.criarAcesso({ nome: v('nome'), email: v('email'), senha: form.elements.senha.value, perfil: 'colaborador' });
+        UI.toast('Acesso criado.');
+      }
+    });
+    el.querySelectorAll('[data-rm]').forEach(b => b.onclick = async () => {
+      const u = Store.usuario(b.dataset.rm);
+      if (!(await UI.confirmar({ titulo: 'Remover acesso?', texto: `${u.nome} não poderá mais entrar na área da equipe.`, botao: 'Remover' }))) return;
+      Store.excluirUsuario(u.id); UI.toast('Acesso removido.'); render();
+    });
+  }
+
+  /* ---------------- Aba: Configurações ---------------- */
+  function abaConfig(el) {
+    const cfg = Store.config();
+    el.innerHTML = `
+      <div style="display:grid;gap:20px">
+        <form class="cartao-config" id="form-config" novalidate>
+          <h2 style="font-size:1.2rem">Contato pelo WhatsApp</h2>
+          <p class="sutil">Número usado nos botões “WhatsApp” do site público.</p>
+          ${campo('whatsapp', 'Número com DDI e DDD', `<input id="c-whatsapp" name="whatsapp" placeholder="55 47 99999-9999" value="${esc(cfg.whatsapp)}">`, false)}
+          ${campo('mensagemWhats', 'Mensagem inicial', `<textarea id="c-mensagemWhats" name="mensagemWhats">${esc(cfg.mensagemWhats)}</textarea>`, false)}
+          <button class="btn btn--primario" type="submit">Salvar</button>
+        </form>
+        <div class="cartao-config">
+          <h2 style="font-size:1.2rem">Cópia de segurança</h2>
+          <p class="sutil">Baixe um arquivo com todos os registros e restaure quando precisar.</p>
+          <div class="form__acoes">
+            <button class="btn btn--neutro" id="btn-exportar">Baixar backup</button>
+            <label class="btn btn--neutro">Restaurar backup<input type="file" accept="application/json" id="btn-importar" hidden></label>
+          </div>
+        </div>
+      </div>`;
+
+    const form = el.querySelector('#form-config');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const num = form.whatsapp.value.replace(/\D/g, '');
+      if (num && (num.length < 12 || num.length > 13)) { UI.mostrarErros(form, { whatsapp: 'Use DDI + DDD + número. Ex.: 55 47 99999-9999' }); return; }
+      UI.mostrarErros(form, {});
+      try { Store.salvarConfig({ whatsapp: num, mensagemWhats: form.mensagemWhats.value.trim() }); UI.toast('Configurações salvas.'); }
+      catch (err) { UI.toast(err.message, 'erro'); }
+    });
+    el.querySelector('#btn-exportar').onclick = () => {
+      const blob = new Blob([Store.exportar()], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `amopeludinhos-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    };
+    el.querySelector('#btn-importar').onchange = async e => {
+      const arq = e.target.files[0];
+      if (!arq) return;
+      if (!(await UI.confirmar({ titulo: 'Restaurar backup?', texto: 'Os dados atuais serão substituídos pelos do arquivo.', botao: 'Restaurar' }))) return;
+      try { Store.importar(await arq.text()); UI.toast('Backup restaurado.'); Auth.sair(); render(); }
+      catch (err) { UI.toast(err.message, 'erro'); }
+    };
+  }
+
+  /* ---------------- Entrada ---------------- */
+  function render() {
+    // RNF03 — sem sessão válida, só a tela de login
+    if (!Auth.atual()) renderLogin();
+    else renderPainel();
+  }
+
+  window.Admin = { render };
+})();
+
+</script>
+  <script>
+/* =========================================================
+   app.js — roteamento simples por hash
+   #/        → área pública
+   #/admin   → área da equipe
+   ========================================================= */
+(function () {
+  const pub = document.getElementById('view-publico');
+  const adm = document.getElementById('view-admin');
+
+  function rota() {
+    const ehAdmin = location.hash.startsWith('#/admin');
+    pub.hidden = ehAdmin;
+    adm.hidden = !ehAdmin;
+    document.title = ehAdmin ? 'Área da equipe · Amo Peludinhos Itajaí' : 'Amo Peludinhos Itajaí';
+    if (ehAdmin) Admin.render();
+    else Publico.render();
+    window.scrollTo(0, 0);
+  }
+
+  // links do menu que rolam até uma seção da página pública
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-scroll]');
+    if (!a) return;
+    e.preventDefault();
+    const ir = () => document.getElementById(a.dataset.scroll).scrollIntoView({ behavior: 'smooth' });
+    if (location.hash.startsWith('#/admin')) { location.hash = '#/'; setTimeout(ir, 50); }
+    else ir();
+  });
+
+  // mantém abas abertas sincronizadas
+  window.addEventListener('storage', () => location.reload());
+
+  Publico.iniciar();
+  window.addEventListener('hashchange', rota);
+  rota();
+})();
+
+</script>
+</body>
+</html>
