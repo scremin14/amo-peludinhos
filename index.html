@@ -319,6 +319,11 @@ p { margin: 0 0 1rem; }
 .nota { font-size: .85rem; color: var(--sutil); background: #faf5f7; border-radius: var(--raio-sm); padding: 10px 14px; margin: 0 0 16px; }
 .cartao-config { background: #fff; border: 1px solid var(--borda); border-radius: var(--raio); padding: 24px; max-width: 560px; }
 
+/* Área da equipe: sem menu nem rodapé do site público */
+.modo-equipe .nav,
+.modo-equipe .rodape { display: none; }
+.modo-equipe .marca__nome small::after { content: " · Área da equipe"; }
+
 </style>
 </head>
 <body>
@@ -1631,6 +1636,8 @@ p { margin: 0 0 1rem; }
     const ehAdmin = location.hash.startsWith('#/admin');
     pub.hidden = ehAdmin;
     adm.hidden = !ehAdmin;
+    // na área da equipe, esconde menu e rodapé do site público
+    document.body.classList.toggle('modo-equipe', ehAdmin);
     document.title = ehAdmin ? 'Área da equipe · Amo Peludinhos Itajaí' : 'Amo Peludinhos Itajaí';
     if (ehAdmin) Admin.render();
     else Publico.render();
