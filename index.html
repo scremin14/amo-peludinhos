@@ -86,9 +86,9 @@ p { margin: 0 0 1rem; }
   padding: 8px 12px; border-radius: 999px;
 }
 .nav a:hover { background: var(--rosa-suave); color: var(--rosa-escuro); }
-.nav .nav__equipe { border: 1px solid var(--borda); }
+.nav .nav__cta { border: 1px solid var(--rosa-medio); color: var(--rosa-escuro); }
 @media (max-width: 720px) {
-  .nav a:not(.nav__equipe) { display: none; }
+  .nav a:not(.nav__cta) { display: none; }
   .marca__nome { font-size: .95rem; }
 }
 
@@ -331,8 +331,7 @@ p { margin: 0 0 1rem; }
       <nav class="nav" aria-label="Navegação principal">
         <a href="#/" data-scroll="adotar">Adotar</a>
         <a href="#/" data-scroll="como">Como funciona</a>
-        <a href="#/" data-scroll="interesse">Quero adotar</a>
-        <a href="#/admin" class="nav__equipe">Área da equipe</a>
+        <a href="#/" data-scroll="interesse" class="nav__cta">Quero adotar</a>
       </nav>
     </div>
   </header>
